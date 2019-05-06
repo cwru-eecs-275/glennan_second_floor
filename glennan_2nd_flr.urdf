@@ -6,19 +6,24 @@
 
   <joint name="glue_robot_to_world" type="fixed">
     <parent link="world"/>
-    <child link="link"/>
+    <child link="glennan_map"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
  <!-- Base Link -->
-  <link name="link">
+  <link name="glennan_map">
     <visual>
-      <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <!--box size="0.2 0.2 1"/-->
-        <mesh filename="package://exmpl_models/glennan_2nd_flr/glennan_2nd_flr.stl"/>
+        <mesh filename="package://glennan_second_floor/glennan_2nd_flr.stl"/>
       </geometry>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://glennan_second_floor/glennan_2nd_flr.stl"/>
+      </geometry>
+    </collision>
     <inertial>
       <origin xyz="0 0 0.5" rpy="0 0 0"/>
       <mass value="1000"/>

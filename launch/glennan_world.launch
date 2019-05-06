@@ -19,8 +19,8 @@
     <arg name="3d_sensor" value="$(arg 3d_sensor)"/>
   </include>
   
-  <include file="$(find glennan_second_floor)/launchers/add_glennan_2nd_flr.launch.xml"/>
-  <include file="$(find glennan_second_floor)/launchers/load_glennan.launch.xml"/>
+  <include file="$(find glennan_second_floor)/launch/add_glennan_2nd_flr.launch"/>
+  <include file="$(find glennan_second_floor)/launch/load_glennan.launch"/>
   
   <node pkg="amcl" type="amcl" name="localization_node">
   </node>
