@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="glennan_second_floor">
+    <static>true</static>
+    <link name="glennan_map">
+      <visual name="glennan_second_floor_visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh>
+            <uri>model://glennan_second_floor/meshes/glennan_second_floor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="glennan_second_floor_collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh>
+            <uri>model://glennan_second_floor/meshes/glennan_second_floor.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>    
+  </model>
+</sdf>
