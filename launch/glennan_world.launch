@@ -3,6 +3,9 @@
   <arg name="world_name"  default="$(find glennan_second_floor)/worlds/glennan_world.world"/>  <!-- Use the glennan_world from this package -->
   <arg name="gui" default="true"/>
 
+  <!-- Other arguments -->
+  <arg name="load_map" default="true" />
+
   <!-- This is the typical way to use the empty_world.launch file to launch any world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="use_sim_time" value="true"/>
@@ -12,6 +15,6 @@
   </include>
   
   <!-- Load the map for the map_server -->
-  <include file="$(find glennan_second_floor)/launch/glennan_second_floor_map.launch"/>
+  <include if="$(arg load_map)" file="$(find glennan_second_floor)/launch/glennan_second_floor_map.launch"/>
   
 </launch>
